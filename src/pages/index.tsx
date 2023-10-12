@@ -8,7 +8,7 @@ function Home() {
     <div>
       <Login />
 
-      {/* <ul>
+      {/*<ul>
         {posts.map((post) => (
           <li key={post.id}>
             <h3>{post.title}</h3>

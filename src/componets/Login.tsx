@@ -8,6 +8,7 @@ import {
   FormLabel,
   Button,
 } from "@chakra-ui/react";
+import Link from "next/link";
 
 const Login = () => {
   return (
@@ -19,22 +20,15 @@ const Login = () => {
     >
       <Box
         p="8"
-        width="300px"
+        width="400px"
         borderWidth="1px"
         borderRadius="lg"
         backgroundColor="white"
         boxShadow="md"
       >
-        <Image
-          src="URL_DE_TU_IMAGEN_DE_PERFIL"
-          alt="Foto de perfil"
-          mx="auto"
-          borderRadius="full"
-          boxSize="64px"
-        />
         <form>
           <FormControl mt="4">
-            <FormLabel htmlFor="username">Usuario</FormLabel>
+            <FormLabel htmlFor="username">Username</FormLabel>
             <Input
               type="text"
               id="username"
@@ -44,7 +38,7 @@ const Login = () => {
             />
           </FormControl>
           <FormControl mt="4">
-            <FormLabel htmlFor="password">Contraseña</FormLabel>
+            <FormLabel htmlFor="password">Password</FormLabel>
             <Input
               type="password"
               id="password"
@@ -54,14 +48,20 @@ const Login = () => {
             />
           </FormControl>
           <Button
-            mt="4"
+            mt="8"
+            mb="8"
             colorScheme="blue"
             size="md"
             width="100%"
             variant="solid"
           >
-            Iniciar Sesión
+            Login
           </Button>
+          <Link href="/register">
+            <p className="font-semibold text-blue-600 cursor-pointer">
+              Register
+            </p>
+          </Link>
         </form>
       </Box>
     </Flex>
